@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * main - doubly linked list representation of a stack (or queue)
+ * main - stack
  *
  * Description: open file and read
  *

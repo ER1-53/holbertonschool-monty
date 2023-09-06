@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * print_dlistint - print a list
+ * print_dlistint - print a list e
  *
  * @h: pointer to the list
  *

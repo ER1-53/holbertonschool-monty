@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * isNumber - check if a string represents a number
+ * isNumber - check if a string represents a number e
  *
  * @tok: pointer to the string
  *

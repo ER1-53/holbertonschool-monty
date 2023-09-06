@@ -2,7 +2,7 @@
 
 
 /**
- * push - doubly linked list representation of a stack (or queue)
+ * push - doubly linked list representation of a stack (or queue) e
  *
  * Description: open file and read
  *
