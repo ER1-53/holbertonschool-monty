@@ -16,7 +16,7 @@ void (*get_opcodes(char *opc))(stack_t **stack, unsigned int line_number)
 		{"pop", pop},
 		{"swap", swap},
 		{"add", add},
-		{"nop", _nop},
+		{"nop", nop},
 		{NULL, NULL}
 	};
 	int i;

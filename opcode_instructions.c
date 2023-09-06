@@ -81,7 +81,7 @@ void pint(stack_t **doubly, unsigned int cline)
 }
 
 /**
- * _pop - removes the top element of the stack
+ * pop - removes the top element of the stack
  *
  * @doubly: head of the linked list
  * @cline: line number
@@ -135,7 +135,7 @@ void swap(stack_t **doubly, unsigned int cline)
 }
 
 /**
- * _add - adds the top two elements of the stack
+ * add - adds the top two elements of the stack
  *
  * @doubly: head of the linked list
  * @cline: line number;
@@ -163,13 +163,13 @@ void add(stack_t **doubly, unsigned int cline)
 	pop(doubly, cline);
 }
 /**
- * _nop - doesn't do anythinhg
+ * nop - doesn't do anythinhg
  *
  * @doubly: head of the linked list
  * @cline: line number;
  * Return: no return
  */
-void _nop(stack_t **doubly, unsigned int cline)
+void nop(stack_t **doubly, unsigned int cline)
 {
 	(void)doubly;
 	(void)cline;

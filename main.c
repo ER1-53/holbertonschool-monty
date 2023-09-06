@@ -82,7 +82,7 @@ int main(int argc, char *argv[])
 		lines[0] = tokenize(varglo.buffer, " \t\n");
         if (lines[0] && lines[0][0] != '#')
 		{
-			f = get-instruction(lines[0]);
+			f = get_opcodes(lines[0]);
 			if (!f)
 			{
 				dprintf(2, "L%u: ", varglo.cont);
