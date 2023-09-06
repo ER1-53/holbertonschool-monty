@@ -43,15 +43,15 @@ int main(int argc, char *argv[])
 	while ((read = getline(&line, &len, file_descriptor)) != -1)
 	{
 		tokenize = strtok(line, " \n");
-		count = 0;
-		while(instructions[count].opcode != NULL)
+		count++;
+		while(instructions[i].opcode != NULL)
 		{
-			if(strcmp(instructions[count].opcode, tokenize) == 0)
+			if(strcmp(instructions[i].opcode, tokenize) == 0)
 			{
-				instructions[count].f(&stack_st, count);
+				instructions[i].f(&stack_st, count);
 				break;
 			}
-			count++;
+			i++;
 		}
 	}
 
