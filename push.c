@@ -16,6 +16,7 @@ void push(stack_t **stack, unsigned int count)
 {
 	stack_t *new_node;
 	char *tok = strtok(NULL, " \n");
+	int value = 0;
 
 	/**/
 
@@ -32,8 +33,8 @@ void push(stack_t **stack, unsigned int count)
 		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
-
-	new_node->n = atoi(tok);/* get integer of tok 2nd arg*/
+	value = atoi(tok);
+	new_node->n = value;/* get integer of tok 2nd arg*/
 	new_node->prev = NULL;
 
 	if (*stack == NULL)
@@ -48,5 +49,6 @@ void push(stack_t **stack, unsigned int count)
 	}
 
 	*stack = new_node;
+	
 	return;
 }
