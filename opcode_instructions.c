@@ -133,37 +133,9 @@ void swap(stack_t **doubly, unsigned int cline)
 	(*doubly)->next = last;
 	(*doubly)->prev = NULL;
 }
-/**
- * queue - sets the format of the data to a queue (FIFO)
- *
- * @doubly: head of the linked list
- * @cline: line number;
- * Return: no return
- */
-void queue(stack_t **doubly, unsigned int cline)
-{
-	(void)doubly;
-	(void)cline;
-
-	varglo.lifo = 0;
-}
-/**
- * stack - sets the format fo the data to a stack (LIFO)
- *
- * @doubly: head of the linked list
- * @cline: line number;
- * Return: no return
- */
-void stack(stack_t **doubly, unsigned int cline)
-{
-	(void)doubly;
-	(void)cline;
-
-	varglo.lifo = 1;
-}
 
 /**
- * add - adds the top two elements of the stack
+ * _add - adds the top two elements of the stack
  *
  * @doubly: head of the linked list
  * @cline: line number;
@@ -189,4 +161,16 @@ void add(stack_t **doubly, unsigned int cline)
 	last = (*doubly)->next;
 	last->n += (*doubly)->n;
 	pop(doubly, cline);
+}
+/**
+ * _nop - doesn't do anythinhg
+ *
+ * @doubly: head of the linked list
+ * @cline: line number;
+ * Return: no return
+ */
+void _nop(stack_t **doubly, unsigned int cline)
+{
+	(void)doubly;
+	(void)cline;
 }

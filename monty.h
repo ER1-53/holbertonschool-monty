@@ -68,16 +68,19 @@ stack_t *add_dnodeint_end(stack_t **head, const int n);
 stack_t *add_dnodeint(stack_t **head, const int n);
 void free_stackt(stack_t *head);
 
-/* opcode_instructuions*/
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
 void pint(stack_t **doubly, unsigned int cline);
 void pop(stack_t **doubly, unsigned int cline);
 void swap(stack_t **doubly, unsigned int cline);
-void queue(stack_t **doubly, unsigned int cline);
-void stack(stack_t **doubly, unsigned int cline);
 void add(stack_t **doubly, unsigned int cline);
+void nop(stack_t **doubly, unsigned int cline);
 void start_varglo(FILE *filed);
+int sch(char *s, char c);
+char *tokenize(char *s, char *d);
+void *reallocmem(void *ptr, unsigned int old_size, unsigned int new_size);
+void *callocmem(unsigned int nmemb, unsigned int size);
+int strcmps(char *s1, char *s2);
 
 void (*get_opcodes(char *opc))(stack_t **stack, unsigned int line_number);
 void free_varglo(void);
