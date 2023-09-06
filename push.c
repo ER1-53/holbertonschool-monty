@@ -2,17 +2,15 @@
 
 
 /**
- * push - doubly linked list representation of a stack (or queue) e
+ * push - reverse the pile of stack
  *
- * Description: open file and read
+ * @stack: pointer to the list
+ * @line_number: pointer to the list
  *
- * @stack: it' the refer to the struct
- * @count: it's number of turn
- *
- * Return: new node
+ * Return: void
  */
 
-void push(stack_t **stack, unsigned int count)
+void push(stack_t **stack, unsigned int line_number)
 {
 	stack_t *new_node;
 	char *tok = strtok(NULL, " \n");
@@ -20,9 +18,9 @@ void push(stack_t **stack, unsigned int count)
 
 	/**/
 
-	if (tok == NULL || isNumber(tok) != 1 )
+	if (tok == NULL || isNumber(tok) != 1)
 	{
-		fprintf(stderr, "L%d: usage: push integer\n", count);
+		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
@@ -49,6 +47,5 @@ void push(stack_t **stack, unsigned int count)
 	}
 
 	*stack = new_node;
-	
-	return;
+
 }

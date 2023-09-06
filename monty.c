@@ -3,9 +3,12 @@
 /**
  * main - stack
  *
+ * @argc: value of the element
+ * @argv: value again
+ *
  * Description: open file and read
  *
- * Return:
+ * Return: 0 for success;
  */
 
 int main(int argc, char *argv[])
@@ -19,30 +22,22 @@ int main(int argc, char *argv[])
 	int i = 0, sniffer = 0;
 
 	instruction_t instructions[] = {
-		{"push", push},
-		{"pall", pall},
-		{"pint", pint},
-		{NULL, NULL}
-	};
+		{"push", push}, {"pall", pall}, {"pint", pint}, {"pop", pop},
+		{"swap", swap}, {"add", add}, {"nop", nop}, {NULL, NULL} };
 
 	if (argc != 2)/* on verfie si il y a 2 arg ./prog fils.m */
 	{
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
-	}
-/* on ouvre le fichier en index argv[1] et le lit */
+	} /* on ouvre le fichier en index argv[1] et le lit */
 	file_descriptor = fopen(argv[1], "r");
-/* si il ne s'ouvre pas ou ne contient rien */
 	if (file_descriptor == NULL)
-	{
+	{/* si il ne s'ouvre pas ou ne contient rien */
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-/* chaque ligne du stream e*/
-/* line = le contenue; file_des = le stream du fichier; len = nbCaractere*/
 	while ((read = getline(&line, &len, file_descriptor)) != -1)
-	{
-
+	{/* line = le contenue; file_des = le stream du fichier; len = nbCaractere*/
 		tokenize = strtok(line, " \n");
 		count++;
 		sniffer = 0;

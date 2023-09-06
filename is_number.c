@@ -10,12 +10,13 @@
  * 0 if the string is not a number
  * 1 if the string is a number
  */
+
 int isNumber(char *tok)
 {
 	char *ptr = tok;
 
 	if (*tok == '\0')
-		return -1;
+		return (-1);
 
 	if (*ptr == '-')
 		ptr++;
@@ -23,10 +24,10 @@ int isNumber(char *tok)
 	while (*ptr != '\0')
 	{
 		if (*ptr < '0' || *ptr > '9')
-			return 0; // It's not a number
+			return (0);
 		ptr++;
 	}
 
-	return 1; // It's a number
+	return (1);
 }
 
