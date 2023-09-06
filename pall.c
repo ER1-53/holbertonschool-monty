@@ -1,18 +1,19 @@
 #include "monty.h"
 
 /**
- * print_dlistint - print a list e
+ * pall - reverse the pile of stack
  *
- * @h: pointer to the list
+ * @stack: pointer to the list
+ * @line_number: pointer to the list
  *
  * Return: temp.
  */
 
-void pall(stack_t **stack, unsigned int count)
+void pall(stack_t **stack, unsigned int line_number)
 {
 	stack_t *current = *stack;
 
-	(void)count;
+	(void)line_number;
 
 	while (current != NULL)
 	{

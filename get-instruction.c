@@ -26,6 +26,6 @@ void (*get_opcodes(char *opc))(stack_t **stack, unsigned int line_number)
 		if (strcmps(instruct[i].opcode, opc) == 0)
 			break;
 	}
-
+	printf("Opcode not found: %s\n", opc);
 	return (instruct[i].f);
 }

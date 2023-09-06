@@ -90,9 +90,10 @@ int main(int argc, char *argv[])
 				free_varglo();
 				exit(EXIT_FAILURE);
 			}
-		nlines = getline(&varglo.buffer, &size, filed);
+		f(&(varglo.head), varglo.cont);
 		varglo.cont++;
         }
+		nlines = getline(&varglo.buffer, &size, filed);
 	}
 
 	free_varglo();
