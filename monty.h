@@ -48,6 +48,7 @@ typedef struct instruction_s
 void push(stack_t **stack, unsigned int count);
 void pall(stack_t **stack, unsigned int count);
 int isNumber(char *tok);
+void monty_free(char *line, FILE *file_descriptor, stack_t *stack_st);
 
 
 #endif /* MONTY_H */

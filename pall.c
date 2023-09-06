@@ -19,4 +19,5 @@ void pall(stack_t **stack, unsigned int count)
 		printf("%d\n", current->n);
 		current = current->next;
 	}
+
 }

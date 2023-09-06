@@ -16,16 +16,15 @@ int main(int argc, char *argv[])
 	stack_t *stack_st = NULL;
 	ssize_t read;
 	unsigned int count = 0;
-	int i = 0;
+	int i = 0, sniffer = 0;
 
-	instruction_t instructions[] =
-	{
+	instruction_t instructions[] = {
 		{"push", push},
 		{"pall", pall},
 		{NULL, NULL}
 	};
 
-	if(argc != 2)/* on verfie si il y a 2 arg ./prog fils.m */
+	if (argc != 2)/* on verfie si il y a 2 arg ./prog fils.m */
 	{
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
@@ -42,22 +41,30 @@ int main(int argc, char *argv[])
 /* line = le contenue; file_des = le stream du fichier; len = nbCaractere*/
 	while ((read = getline(&line, &len, file_descriptor)) != -1)
 	{
+
 		tokenize = strtok(line, " \n");
 		count++;
-		while(instructions[i].opcode != NULL)
+		sniffer = 0;
+
+		if (tokenize != NULL)
 		{
-			if(strcmp(instructions[i].opcode, tokenize) == 0)
+			for (i = 0; instructions[i].opcode != NULL; i++)
 			{
-				instructions[i].f(&stack_st, count);
-				break;
+				if (strcmp(instructions[i].opcode, tokenize) == 0)
+				{
+					sniffer = 1;
+					instructions[i].f(&stack_st, count);
+					break;
+				}
 			}
-			i++;
+			if (sniffer != 1)
+			{
+				fprintf(stderr, "L%d: unknown instruction %s\n", count, tokenize);
+				monty_free(line, file_descriptor, stack_st);
+				exit(EXIT_FAILURE);
+			}
 		}
 	}
-
-	fclose(file_descriptor);
-	if (line)
-		free(line);
-
+	monty_free(line, file_descriptor, stack_st);
 	return (0);
 }
