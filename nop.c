@@ -1,12 +1,10 @@
 #include "monty.h"
 
 /**
- * nop - reverse the pile of stack
+ * nop - Does nothing (no operation).
  *
- * @stack: pointer to the list
- * @line_number: pointer to the list
- *
- * Return: temp.
+ * @stack: Double pointer to the head of the stack (not used here).
+ * @line_number: Line number in the Monty bytecode file (not used here).
  */
 
 void nop(stack_t **stack, unsigned int line_number)

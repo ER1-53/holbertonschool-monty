@@ -1,12 +1,10 @@
 #include "monty.h"
 
 /**
- * pint - reverse the pile of stack
+ * pint - Prints the value at the top of the stack.
  *
- * @stack: pointer to the list
- * @line_number: pointer to the list
- *
- * Return: temp.
+ * @stack: Double pointer to the head of the stack.
+ * @line_number: Line number in the Monty bytecode file.
  */
 
 void pint(stack_t **stack, unsigned int line_number)
@@ -15,8 +13,7 @@ void pint(stack_t **stack, unsigned int line_number)
 	{
 		fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
 		exit(EXIT_FAILURE);
-		return;
 	}
-
+/* afficher la valeur du premier élément de la pile */
 	printf("%d\n", (*stack)->n);
 }

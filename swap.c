@@ -1,12 +1,10 @@
 #include "monty.h"
 
 /**
- * swap - reverse the pile of stack
+ * swap - Swaps the top two elements of the stack.
  *
- * @stack: pointer to the list
- * @line_number: pointer to the list
- *
- * Return: temp.
+ * @stack: Double pointer to the head of the stack.
+ * @line_number: Line number in the Monty bytecode file.
  */
 
 void swap(stack_t **stack, unsigned int line_number)
@@ -17,7 +15,6 @@ void swap(stack_t **stack, unsigned int line_number)
 	{
 		fprintf(stderr, "L%u: can't swap, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
-		return;
 	}
 
 	temp = (*stack)->n;

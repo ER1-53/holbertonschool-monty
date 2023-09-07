@@ -1,12 +1,10 @@
 #include "monty.h"
 
 /**
- * add - reverse the pile of stack
+ * add - Adds the top two elements of the stack.
  *
- * @stack: pointer to the list
- * @line_number: pointer to the list
- *
- * Return: temp.
+ * @stack: Double pointer to the head of the stack.
+ * @line_number: Line number in the Monty bytecode file.
  */
 
 void add(stack_t **stack, unsigned int line_number)
@@ -17,9 +15,8 @@ void add(stack_t **stack, unsigned int line_number)
 	{
 		fprintf(stderr, "L%u: can't add, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
-		return;
 	}
 	result = (*stack)->n + (*stack)->next->n;
-	pop(stack, line_number);
-	(*stack)->n = result;
+	pop(stack, line_number); /* Retire le deuxième élément de la pile */
+	(*stack)->n = result; /* Stocke le résultat dans le premier élément */
 }

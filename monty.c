@@ -1,14 +1,12 @@
 #include "monty.h"
 
 /**
- * main - stack
+ * main - Entry point for the Monty interpreter.
  *
- * @argc: value of the element
- * @argv: value again
+ * @argc: Number of command-line arguments.
+ * @argv: Array of command-line argument strings.
  *
- * Description: open file and read
- *
- * Return: 0 for success;
+ * Return: 0 for success.
  */
 
 int main(int argc, char *argv[])
@@ -23,7 +21,7 @@ int main(int argc, char *argv[])
 
 	instruction_t instructions[] = {
 		{"push", push}, {"pall", pall}, {"pint", pint}, {"pop", pop},
-		{"swap", swap}, {"add", add}, {"nop", nop}, {NULL, NULL} };
+		{"swap", swap}, {"add", add}, {"nop", nop}, {NULL, NULL}};
 
 	if (argc != 2)/* on verfie si il y a 2 arg ./prog fils.m */
 	{

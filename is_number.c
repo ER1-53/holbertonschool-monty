@@ -17,7 +17,7 @@ int isNumber(char *tok)
 
 	if (*tok == '\0')
 		return (-1);
-
+/* Si le premier caractère est un signe négatif, ignorez-le */
 	if (*ptr == '-')
 		ptr++;
 

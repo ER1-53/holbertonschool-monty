@@ -2,11 +2,15 @@
 
 
 /**
- * monty_free - check if a string represents a number e
+ * monty_free - Frees memory and resources used in the Monty program.
  *
- * @line: pointer to the string
- * @file_descriptor: pointer to the string
- * @stack_st: pointer to the string
+ * @line: Pointer to a string (not used here).
+ * @file_descriptor: Pointer to a file stream.
+ * @stack_st: Pointer to the stack.
+ *
+ * This function is responsible for freeing dynamically allocated memory
+ * and resources used by the Monty program. It takes care of freeing the
+ * line buffer, closing the file descriptor, and deallocating the stack.
  *
  * Return: void
  */
