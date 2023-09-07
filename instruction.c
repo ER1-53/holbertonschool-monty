@@ -42,7 +42,7 @@ int instruction(FILE *file_descriptor)
 			if (sniffer != 1)
 			{
 				fprintf(stderr, "L%d: unknown instruction %s\n", count, tokenize);
-				return (1);
+				exit(EXIT_FAILURE);
 			}
 		}
 	}
