@@ -18,9 +18,10 @@
 void monty_free(char *line, FILE *file_descriptor, stack_t *stack_st)
 {
 	stack_t *temp;
-
-	free(line);
-	fclose(file_descriptor);
+	if (line)
+    	free(line);
+	if (file_descriptor)
+		fclose(file_descriptor);
 
 	while (stack_st != NULL)
 	{
