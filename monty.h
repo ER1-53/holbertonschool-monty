@@ -59,8 +59,7 @@ void nop(stack_t **stack, unsigned int line_number);
 /* Other action function */
 int isNumber(char *tok);
 void monty_free(char *line, FILE *file_descriptor, stack_t *stack_st);
-
-
+void instruction(FILE *file_descriptor);
 
 
 #endif /* MONTY_H */
