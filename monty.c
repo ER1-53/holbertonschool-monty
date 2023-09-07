@@ -12,8 +12,8 @@
 int main(int argc, char *argv[])
 {
 	FILE *file_descriptor;
-	char *line = NULL;
-	stack_t *stack_st = NULL;
+	/*char *line = NULL;
+	stack_t *stack_st = NULL;*/
 
 
 	if (argc != 2) /* on verfie si il y a 2 arg ./prog fils.m */
@@ -29,6 +29,6 @@ int main(int argc, char *argv[])
 	}
 	instruction(file_descriptor);
 
-	monty_free(line, file_descriptor, stack_st);
+	/*monty_free(line, file_descriptor, stack_st);*/
 	return (0);
 }
