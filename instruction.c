@@ -42,6 +42,7 @@ int instruction(FILE *file_descriptor)
 			if (sniffer != 1)
 			{
 				fprintf(stderr, "L%d: unknown instruction %s\n", count, tokenize);
+				monty_free(line, file_descriptor, stack_st);
 				exit(EXIT_FAILURE);
 			}
 		}
