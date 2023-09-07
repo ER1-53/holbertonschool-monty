@@ -3,7 +3,8 @@
 /**
  * instruction - Process instructions from a file using the Monty interpreter.
  *
- * @file_descriptor: File descriptor for the input file containing Monty instructions.
+ * @file_descriptor: File descriptor for the input file containing
+ * Monty instructions.
  *
  * Return: 0 for success, 1 for errors.
  */
@@ -11,7 +12,8 @@
 int instruction(FILE *file_descriptor)
 {
 	instruction_t instructions[] = {
-		{"push", push}, {"pall", pall}, {"pint", pint}, {"pop", pop}, {"swap", swap}, {"add", add}, {"nop", nop}, {NULL, NULL}};
+		{"push", push}, {"pall", pall}, {"pint", pint}, {"pop", pop},
+		{"swap", swap}, {"add", add}, {"nop", nop}, {NULL, NULL}};
 
 	char *line = NULL, *tokenize = NULL;
 	size_t len = 0;
@@ -40,7 +42,7 @@ int instruction(FILE *file_descriptor)
 			if (sniffer != 1)
 			{
 				fprintf(stderr, "L%d: unknown instruction %s\n", count, tokenize);
-				return 1;
+				return (1);
 			}
 		}
 	}
