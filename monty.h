@@ -12,6 +12,7 @@
 #include <stdbool.h>
 
 
+/*--------------- Data structure for stack ---------------*/
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -29,6 +30,7 @@ typedef struct stack_s
 	struct stack_s *next;
 } stack_t;
 
+/*--------------- Data structure for Monty instructions ---------------*/
 
 /**
  * struct instruction_s - opcode and its function e
@@ -45,13 +47,19 @@ typedef struct instruction_s
 } instruction_t;
 
 
-void push(stack_t **stack, unsigned int count);
-void pall(stack_t **stack, unsigned int count);
+/* Monty instruction functions */
+void push(stack_t **stack, unsigned int line_number);
+void pall(stack_t **stack, unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
+void pop(stack_t **stack, unsigned int line_number);
+void swap(stack_t **stack, unsigned int line_number);
+void add(stack_t **stack, unsigned int line_number);
+void nop(stack_t **stack, unsigned int line_number);
 
+/* Other action function */
 int isNumber(char *tok);
 void monty_free(char *line, FILE *file_descriptor, stack_t *stack_st);
-int instruction(FILE *file_descriptor);
+
 
 
 
