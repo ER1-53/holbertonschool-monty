@@ -51,6 +51,7 @@ void pint(stack_t **stack, unsigned int line_number);
 
 int isNumber(char *tok);
 void monty_free(char *line, FILE *file_descriptor, stack_t *stack_st);
+int instruction(FILE *file_descriptor);
 
 
 

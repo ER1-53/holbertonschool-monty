@@ -91,7 +91,6 @@ Soumettez une demande de tirage (pull request) avec vos modifications.
 ## Auteurs
 
 
-
-[Leticia Habib](https://github.com/letihab) C21 HolbertonSchool
+[Leticia Habib]() C21 HolbertonSchool
 
 [Erwan Cremey](https://github.com/ER1-53) C21 HolbertonSchool
