@@ -1,60 +1,61 @@
 
-
-# README pour le Projet Monty
+# Projet Monty
 
 ## Description
 
-Ce projet Monty est un interpréteur pour le langage de programmation Monty. Il permet de lire et d'exécuter des programmes Monty à partir de fichiers texte en utilisant une pile pour stocker et manipuler des données.
-
-## Fonctionnalités
-
-- Lecture de fichiers Monty.
-- Gestion des instructions Monty, y compris `push`, `pall`, `pint`, `pop`, `swap`, `add`, et `nop`.
-- Gestion des erreurs et des messages d'erreur appropriés.
-- Libération de la mémoire et des ressources à la fin de l'exécution.
-
-## Utilisation
-
-Pour exécuter le programme Monty, utilisez la ligne de commande avec un fichier Monty en tant qu'argument :
-
-```shell
-./monty fichier.m
+This Monty project is an interpreter for the Monty programming language. It lets you read and execute Monty programs from text files, using a stack to store and manipulate data.
 
 
-Assurez-vous d'avoir le fichier Monty spécifié (par exemple, fichier.m) dans le même répertoire que l'exécutable monty.
+## Fonctionnalities
 
+- Reading Monty files.
+- Manage Monty instructions, including `push`, `pall`, `pint`, `pop`, `swap`, `add`, and `nop`.
+- Error handling and appropriate error messages.
+- Memory and resource release at the end of execution.
 
+## Used
 
-## Exemples
+To run the Monty program, use the command line with a Monty file as argument:
 
-Voici quelques exemples d'utilisation :
+ | shell |
+ ```
 
-
-
-Exécuter un fichier Monty :
-
-
+ ./monty fichier.m
 ```
-{
+
+Make sure you have the specified Monty file (for example, file.m) in the same directory as the monty executable.
+
+
+
+## Examples
+
+Here are a few examples:
+
+
+
+Running a Monty :
+
 
 | shell |
-| ----------- | ----------- |
 
+```
 Copy code
 
-
-./monty mon_programme.m
-}
+./monty my_program.m
 ```
 
-Exemple de contenu d'un fichier Monty (mon_programme.m) :
 
 
 
-text
 
-Copy code
+Example of the contents of a Monty file  (my_program.m) :
 
+
+
+| text |
+
+| Copy code |
+```
 push 1
 
 push 2
@@ -62,35 +63,18 @@ push 2
 add
 
 pall
+```
+| Output |
 
-Sortie attendue :
-
-
-
-text
-
-Copy code
-
+```
 3
-
-## Contributions
-
-Les contributions au projet Monty sont les bienvenues. Si vous souhaitez contribuer, suivez ces étapes :
-
-
-
-Fork du référentiel (repository) Monty.
-
-Créez une branche (branch) pour votre contribution.
-
-Faites vos modifications et assurez-vous de bien documenter les changements.
-
-Soumettez une demande de tirage (pull request) avec vos modifications.
-
+```
 
 ## Auteurs
 
 
-[Leticia Habib]() C21 HolbertonSchool
+[Leticia Habib](https://github.com/letihab) C21 HolbertonSchool
 
 [Erwan Cremey](https://github.com/ER1-53) C21 HolbertonSchool
+
+
