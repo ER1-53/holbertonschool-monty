@@ -1,5 +1,12 @@
 #include "monty.h"
 
+/**
+ * _div - Divide the second top element of the stack by the top element
+ *
+ * @stack: Pointer to the stack
+ * @line_number: Line number in the Monty file
+ */
+
 void _div(stack_t **stack, unsigned int line_number)
 {
 	int result = 0;
@@ -18,8 +25,7 @@ void _div(stack_t **stack, unsigned int line_number)
 	result = (*stack)->next->n / (*stack)->n;
 	pop(stack, line_number);
 	(*stack)->n = result;
-	/*ù(*stack)->n = (*stack)->next->n / (*stack)->n;
-	pop(stack->prev, line_number);*/
+
 
 
 
